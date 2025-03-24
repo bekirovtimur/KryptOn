@@ -1,0 +1,64 @@
+services:
+  mysql:
+    image: "mysql:lts"
+    restart: always
+    environment:
+      TZ: ${TZ}
+      LANG: C.UTF-8
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASS}
+    volumes:
+      - "mysql-data:/var/lib/mysql"
+    healthcheck:
+      test: "mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD"
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  php:
+    build:
+      context: ./php
+    restart: always
+    volumes:
+      - ./php/app:/var/www/html/
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASS}
+      SUBSCRIPTION_BASE_URL: ${SUBSCRIPTION_BASE_URL}
+    ports:
+      - '127.0.0.1:9000:9000'
+
+  tgbot:
+    build:
+      context: ./bot
+    restart: always
+    environment:
+      SUBSCRIPTION_SERVER_URL: ${SUBSCRIPTION_SERVER_URL}
+      SUBSCRIPTIONS_MAX_COUNT: ${SUBSCRIPTIONS_MAX_COUNT}
+      BOT_TOKEN: ${BOT_TOKEN}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASS}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    depends_on:
+      - mysql
+
+  # nginx:
+  #   image: nginx:latest
+  #   restart: always
+  #   # environment:
+  #   #   - VIRTUAL_HOST=site.test.local
+  #   depends_on:
+  #     - php
+  #   volumes:
+  #     - ./docker/nginx/conf.d/default.nginx:/etc/nginx/conf.d/default.conf
+  #     - ./html/:/var/www/html/
+  #   ports:
+  #     - 8080:80
+
+volumes:
+  mysql-data:
+    driver: local
