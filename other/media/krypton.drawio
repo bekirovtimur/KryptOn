@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram name="Страница — 1" id="b5Jlmuk-dwnWHyzzB2wm">
+    <mxGraphModel dx="1434" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fOcITTV3FwWvrKLBx8z6-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#2baee5, #ededed);fontColor=default;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="400" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="fOcITTV3FwWvrKLBx8z6-4" value="Kr" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=175;fontFamily=Tahoma;fontStyle=1;fontColor=light-dark(#eaeaea, #ededed);" vertex="1" parent="1">
+          <mxGeometry x="290" y="230" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fOcITTV3FwWvrKLBx8z6-5" value="&lt;font face=&quot;Tahoma&quot; style=&quot;font-size: 48px;&quot;&gt;KRYPTON&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontColor=light-dark(#eaeaea, #ededed);fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="225" y="440" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fOcITTV3FwWvrKLBx8z6-6" value="&lt;font face=&quot;Tahoma&quot; style=&quot;font-size: 32px;&quot;&gt;83.80&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontColor=light-dark(#eaeaea, #ededed);fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fOcITTV3FwWvrKLBx8z6-7" value="&lt;font face=&quot;Tahoma&quot; style=&quot;font-size: 32px;&quot;&gt;36&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontColor=light-dark(#eaeaea, #ededed);fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="530" y="130" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -55,6 +55,7 @@ def user_check(message):
         cursor.close()
 
     bot.delete_message(message.chat.id, message.message_id)
+    bot.send_message(message.chat.id,f'🔹<b>KryptOn</b>🔹', parse_mode='html')
     menu(message)
 
 def menu(message):
@@ -63,7 +64,7 @@ def menu(message):
     markup.add(types.InlineKeyboardButton('🔹 Balance', callback_data='balance'))
     markup.add(types.InlineKeyboardButton('🔹 Subscriptions', callback_data='subscriptions'))
     markup.add(types.InlineKeyboardButton('🔹 Get Help', callback_data='help'))
-    bot.send_message(message.chat.id,f'<b>KryptOn Main Menu</b>', parse_mode='html', reply_markup=markup)
+    bot.send_message(message.chat.id,f'<b>Main Menu</b>', parse_mode='html', reply_markup=markup)
 
 def balance(message):
     # Balance menu page

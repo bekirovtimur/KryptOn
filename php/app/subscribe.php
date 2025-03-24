@@ -41,8 +41,10 @@ $stmt->bind_result($usertoken, $region, $endDate);
 
 if ($stmt->fetch()) {
     http_response_code(200);
+    $profiletitle = "🔹KryptON🔹".$region."🔹";
+    $profiletitle_b64 = base64_encode($profiletitle);
     header('Content-Type: text/plain');
-    echo "//profile-title: base64:8J+UuUtyeXB0T07wn5S5 ".$region."\n";
+    echo "//profile-title: base64:".$profiletitle_b64."\n";
     echo "//profile-update-interval: 8\n";
     echo "//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=".$endDate."\n";
     echo "//support-url: https://t.me/KryptOnAssistBot\n";
