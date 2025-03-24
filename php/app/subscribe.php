@@ -41,7 +41,7 @@ $stmt->bind_result($usertoken, $region, $endDate);
 
 if ($stmt->fetch()) {
     http_response_code(200);
-    $profiletitle = "🔹KryptON🔹".$region."🔹";
+    $profiletitle = "🔹KryptOn🔹".$region."🔹";
     $profiletitle_b64 = base64_encode($profiletitle);
     header('Content-Type: text/plain');
     echo "//profile-title: base64:".$profiletitle_b64."\n";
@@ -54,7 +54,6 @@ if ($stmt->fetch()) {
 $userurl = $url."/".$region.".txt";
 $content = file_get_contents($userurl);
 echo $content;
-
 
 } else {
     http_response_code(403);
