@@ -84,5 +84,14 @@ certbot --nginx -d your-domain.com
 ```
 ## Important Notes
 - Proxy servers (VMess, VLess, Hysteria, Shadowsocks) used in this project are obtained from public sources and provided as examples only
-
 - Project is provided "as is"
+
+## License
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+Distributed under the MIT License. See `LICENSE` file for more information.
+
+## Contacts
+- **Author**: [Bekirov Timur](https://github.com/bekirovtimur)
+- **Telegram**: [@bekirovtimur](https://t.me/bekirovtimur)
+- **Issues**: https://github.com/bekirovtimur/KryptOn/issues
