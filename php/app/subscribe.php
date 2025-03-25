@@ -56,8 +56,17 @@ $content = file_get_contents($userurl);
 echo $content;
 
 } else {
-    http_response_code(403);
-    echo "Error: Token not found.";
+    http_response_code(200);
+    $profiletitle = "🔹KryptOn🔹";
+    $profiletitle_b64 = base64_encode($profiletitle);
+    header('Content-Type: text/plain');
+    echo "//profile-title: base64:".$profiletitle_b64."\n";
+    echo "//profile-update-interval: 24\n";
+    echo "//subscription-userinfo: upload=1024; download=1024; total=1024; expire=".time()."\n";
+    echo "//support-url: https://t.me/KryptOnAssistBot\n";
+    echo "//profile-web-page-url: https://t.me/KryptOnAssistBot\n";
+    echo "//user-token: ".$token."\n\n";
+    echo "ss://none:0000@127.0.0.1:1#%F0%9F%94%B4%20EXPIRED%20%F0%9F%94%B4\n";
 }
 
 $stmt->close();
