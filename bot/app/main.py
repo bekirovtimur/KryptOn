@@ -63,7 +63,7 @@ def menu(message):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton('🔹 Balance', callback_data='balance'))
     markup.add(types.InlineKeyboardButton('🔹 Subscriptions', callback_data='subscriptions'))
-    markup.add(types.InlineKeyboardButton('🔹 Get Help', callback_data='help'))
+    markup.add(types.InlineKeyboardButton('🔹 Get Help', url='https://telegra.ph/KryptOn-03-26-3'))
     bot.send_message(message.chat.id,f'<b>Main Menu</b>', parse_mode='html', reply_markup=markup)
 
 def balance(message):
