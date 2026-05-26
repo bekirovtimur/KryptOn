@@ -28,10 +28,6 @@ KryptOn is a comprehensive proxy subscription management solution consisting of:
 - **Database**: MySQL
 - **Infrastructure**: Docker, Nginx
 
-## Demo
-
-Try the Telegram bot: [@KryptOnAssistBot](https://t.me/KryptOnAssistBot)
-
 ## Installation Guide
 
 ### Prerequisites
