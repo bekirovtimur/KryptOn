@@ -1,6 +1,6 @@
 # KryptOn
 
-<img src="https://raw.githubusercontent.com/bekirovtimur/KryptOn/refs/heads/main/other/media/krypton-model.jpg" alt="drawing" width="200"/>
+<img src="https://raw.githubusercontent.com/bekirovtimur/KryptOn/refs/heads/main/other/media/krypton.png" alt="drawing" width="200"/>
 
 An OpenSource subscription management system with Telegram bot and API endpoint.
 
